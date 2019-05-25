@@ -2,52 +2,19 @@
 <template>
         <header>
             <div class="leftHeader">
-                <div class="logo">
-                    <img src="../../assets/images/logo.png" class="logoImg" draggable="false"/>
-                </div>   
                 <div class="menuIcon">
                     <img src="../../assets/images/menu.png" @click="openMenu" />    
                 </div> 
             </div>
             <div class="rightHeader">
                 <div class="notif">
-                    <img src="../../assets/images/notification.png" @click.stop="openNotif(!showNotif)" class="icons"/>
+                   <p  @click="newBorrow" style="font-weight:bold; font-size: 25px">+</p>
                    <!-- notifOpen -->
                     <div class="notifOpen" v-if="showNotif">
-
                     </div>
                 </div>
-                <div class="apps">
-                    <img src="../../assets/images/apps.png" @click.stop="getAllServices(!showApps)" class="icons"/>
-                    <!-- appsOpen -->
-                    <div class="appsOpen" v-if="showApps">
-                        <div class="blocksApps">
-                            <img src="../../assets/images/account.png" alt="images">
-                            <p>Account</p>
-                        </div>
-                        <div class="blocksApps">
-                            <img src="../../assets/images/mess.png" alt="images">
-                            <p>Messenger</p>
-                        </div>
-                        <div class="blocksApps">
-                            <img src="../../assets/images/board.png" alt="images">
-                            <p>Board</p>
-                        </div>
-                        <div class="blocksApps">
-                            <img src="../../assets/images/sales.png" alt="images">
-                            <p>Sales</p>
-                        </div>
-                        <div class="blocksApps">
-                            <img src="../../assets/images/travel.png" alt="images">
-                            <p>Travel</p>
-                        </div>
-                    </div>
-                </div>
+               
                 <div class="userProfile" @click.stop="logout(!showLogout)">
-                    <p>Name</p>
-                    <div class="avatarHeader">
-                        <img src=""/>
-                    </div>
                     <!-- logout -->
                     <div class="logout" v-if="showLogout">
                         <p>Выйти</p>
@@ -68,6 +35,11 @@
             }
         },
         methods: {
+            newBorrow() {
+                this.$router.push({ 
+                    path: 'new'
+                });
+            },
             openMenu() {
                 var menu = document.querySelector('.sidebar');
                 var opM = document.querySelector('.menuBlock');
@@ -118,8 +90,8 @@
         width: 100%;
         background: var(--main-white-color);
         border-bottom: 1px solid var(--main-border-color);
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         display: flex;
         margin-bottom: 20px;
         justify-content: space-between;
@@ -138,7 +110,6 @@
         }
         .rightHeader{
             width: 50%;
-            margin-right: 20px;
             display: flex;
             align-items: center;
             justify-content: flex-end;

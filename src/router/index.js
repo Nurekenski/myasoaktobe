@@ -12,19 +12,24 @@
     import Check from '../components/auth/components/check.vue';
 
 
+    import Index from '../components/account/index.vue';
+    import Body from '../components/account/body.vue';
+    import Busket from '../components/account/busket.vue';
+
+
+
     import UserPage from '../components/account/UserPage.vue';
     import User from '../components/account/user.vue';
-    import Profile from '../components/account/profile.vue';
+    import New from '../components/account/new.vue';
+    import Calculation from '../components/account/calculation.vue';
     import Settings from '../components/account/settings.vue';
     import Faq from '../components/account/faq.vue';
-
-
     import ErrorPage from '../components/error/404.vue';
 
     const router = new VueRouter({
     routes: [
             {
-                path: '/',
+                path: '/user',
                 component: AuthPage,
                 meta: { guest: true },
                 children: [
@@ -37,14 +42,21 @@
                 ]
             }, 
             {
-                path: '/user',
-                component: UserPage,
+                 path: '/new', 
+                 component: New,
+            },
+            {
+                path: '/calculation', 
+                component: Calculation,
+            },
+            { path: '/settings', component: Settings },
+            {
+                path: '/',
+                component: Index,
                 // meta: { requiresAuth: true },
                 children: [
-                    { path: '/', component: User  },
-                    { path: 'profile', component: Profile },
-                    { path: 'settings', component: Settings },
-                    { path: 'faq', component: Faq },
+                    { path: '/', component: Body  },
+                    { path: 'busket', component: Busket },
                 ]
             },
             {

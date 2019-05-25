@@ -28,7 +28,6 @@
 
         .nameMenu {
                 width: 100%;
-                padding: 10px 20px;
                 border-bottom: 2px solid var(--main-border-color);
 
                 p {

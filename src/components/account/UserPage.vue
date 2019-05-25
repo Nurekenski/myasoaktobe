@@ -12,24 +12,27 @@
                         <!--  v-for="item in items" -->
                         <li>
                             <img src="../../assets/images/1.png" alt="images">                 
-                            <div @click="closeMenu"><router-link to="/user" class="routerLink">{{$t("message.personal_page")}}</router-link></div>
+                            <!-- <div @click="closeMenu"><router-link to="/user" class="routerLink">{{$t("message.personal_page")}}</router-link></div> -->
+                            <div @click="closeMenu"><router-link to="/user" class="routerLink">Негізгі</router-link></div>
                         </li>
                         <li>
                             <img src="../../assets/images/2.png" alt="images">
-                            <div @click="closeMenu"><router-link to="/user/profile" class="routerLink">{{$t("message.personal_info")}}</router-link></div>
+                            <!-- <div @click="closeMenu"><router-link to="/user/profile" class="routerLink">{{$t("message.personal_info")}}</router-link></div> -->
+                            <div @click="closeMenu"><router-link to="/new" class="routerLink">Жаңа қарыз</router-link></div>
                         </li>          
                         <li>
                             <img src="../../assets/images/3.png" alt="images">
-                            <div @click="closeMenu"><router-link to="/user/settings" class="routerLink">{{$t("message.settings")}}</router-link></div>
+                            <!-- <div @click="closeMenu"><router-link to="/user/settings" class="routerLink">{{$t("message.settings")}}</router-link></div> -->
+                            <div @click="closeMenu"><router-link to="/settings" class="routerLink">Статистика</router-link></div>
                         </li>          
-                        <li>
+                        <!-- <li>
                             <img src="../../assets/images/4.png" alt="images">
                             <div @click="closeMenu"><router-link to="/user/faq" class="routerLink">{{$t("message.ans_ques")}}</router-link></div>
                         </li>          
                         <li>
                             <img src="../../assets/images/5.png" alt="images">
                             <a class="routerLink">{{$t("message.logout")}}</a>                                                
-                        </li>          
+                        </li>           -->
                     </ul>
                    
              </div>
@@ -37,7 +40,7 @@
                     <router-view></router-view>
              </div>
         </div>  
-        <div class="language-div">
+        <!-- <div class="language-div">
             <div class="selector">
                 <img :src="link" alt="">
                 <p style="color:red">{{ selected }}</p>
@@ -45,7 +48,7 @@
                     <option v-for="(key, value) in object"  :key="`Lang${value}`" class="op" :value="value"><p>{{ key }} </p></option>
                 </select>
             </div>
-        </div>
+        </div> -->
 
         
     </div>                 
@@ -221,8 +224,8 @@
 
                     .closeMenu {
                         display: block;
-                        width: 30px;
-                        height: 30px;
+                        width: 25px;
+                        height: 25px;
                         cursor: pointer;
                         margin: 10px;
                     }

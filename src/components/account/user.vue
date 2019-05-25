@@ -2,164 +2,77 @@
 <template>
         <div class="content">
              <div class="flexContent">
-                    <div class="mFlex">
-                        <div class="mainAvatar">
-                            <div class="nameProfile">
-                                <p>{{$t("message.title_profile")}}</p>
-                            </div>
-                            <div class="avatarImg">
-                                <img src="../../assets/images/Alli.jpg" alt="images">
-                            </div>
-                            <div class="btnChange">
-                                <span>{{$t("message.change")}}</span>
-                            </div>
-                        </div>
-                        <div class="infoUser">
-                            <!-- profile -->                    
-                            <div class="nameProfile">
-                                <p>{{$t("message.title_profile")}}</p>
-                            </div>
-                            <div class="profileFacts">
-                                <!-- name -->
-                                <div class="name">
-                                    <p>Имя Фамилия</p>
-                                </div>
-                                <!-- birstday -->
-                                <div class="flexFacts">
-                                    <div class="flexFactsLeft">
-                                        <p>{{$t("message.birthday")}}</p>
-                                    </div>
-                                    <div class="flexFactsRight">
-                                        <p>1999-07-10</p>
-                                    </div>
-                                </div>
-                                <!-- gender -->
-                                <div class="flexFacts">
-                                    <div class="flexFactsLeft">
-                                        <p>{{$t("message.gender")}}</p>
-                                    </div>
-                                    <div class="flexFactsRight">
-                                        <p>Мужской</p>
-                                    </div>
-                                </div>
-                                <!-- phone -->
-                                <div class="flexFacts">
-                                    <div class="flexFactsLeft">
-                                        <p>{{$t("message.phone")}}</p>
-                                    </div>
-                                    <div class="flexFactsRight">
-                                        <p>+771727727272</p>
-                                    </div>
-                                </div>
-                                <!-- country -->
-                                <div class="flexFacts">
-                                    <div class="flexFactsLeft">
-                                        <p>{{$t("message.country")}}</p>
-                                    </div>
-                                    <div class="flexFactsRight">
-                                        <p>Кз</p>
-                                    </div>
-                                </div>
-                                <!-- show and hide button -->
-                                
-                                <button class="btnShow">{{$t("message.information")}}</button>
-
-                                <!-- show and hide block -->
-                                <div v-show="true" class="flexFactsShowAndHide">
-                                    <!-- email -->
-                                    <div class="flexFacts">
-                                        <div class="flexFactsLeft">
-                                            <p>E-mail:</p>
-                                        </div>
-                                        <div class="flexFactsRight">
-                                            <p>Test@mail.ru</p>
-                                        </div>
-                                    </div>
-                                    <!-- nikname -->
-                                    <div class="flexFacts">
-                                        <div class="flexFactsLeft">
-                                            <p>{{$t("message.nickname")}}</p>
-                                        </div>
-                                        <div class="flexFactsRight">
-                                            <p>test</p>
-                                        </div>
-                                    </div>
-                                    <!-- adress -->
-                                    <div class="flexFacts">
-                                        <div class="flexFactsLeft">
-                                            <p>{{$t("message.address")}}</p>
-                                        </div>
-                                        <div class="flexFactsRight">
-                                            <p>Test adress</p>
-                                        </div>
-                                    </div>
-                                    <!-- index -->
-                                    <div class="flexFacts">
-                                        <div class="flexFactsLeft">
-                                            <p>{{$t("message.index")}}</p>
-                                        </div>
-                                        <div class="flexFactsRight">
-                                            <p>test</p>
-                                        </div>
-                                    </div>
-                                    <!-- Region -->
-                                    <div class="flexFacts">
-                                        <div class="flexFactsLeft">
-                                            <p>{{$t("message.region")}}</p>
-                                        </div>
-                                        <div class="flexFactsRight">
-                                            <p>test</p>
-                                        </div>
-                                    </div>
-                                    <!-- City -->
-                                    <div class="flexFacts">
-                                        <div class="flexFactsLeft">
-                                            <p>{{$t("message.city")}}</p>
-                                        </div>
-                                        <div class="flexFactsRight">
-                                            <p>test</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                    </div>
-                      
                     <!-- photos -->
-                    <div class="photosMainBlock">
+                    <div class="photosMainBlock" style="background:white">
                         <div class="nameMenu">
-                            <p>{{$t("message.photo")}}</p>
+                        <p>ІЗДЕУ</p>
                         </div>
-                        <!-- photo scroll -->
                         <div class="photoScrollBlock">
-                            <div class="photoImg">
-                                <img src="../../assets/images/Alli.jpg" alt="images">
+                            <div class="labels">
+                                <div class="label_search">
+                                    <p>Аты жөні</p>
+                                    <input placeholder="Аты жөні">
+                                </div>
+                                <div  class="label_search">
+                                    <p>Қай күн аралығы</p>
+                                    <input type="date">
+                                    <input type="date">
+                                </div>
+                                <div  class="label_search">
+                                    <p>Кім берді</p>
+                                    <select>
+                                        <option>Тандау</option>
+                                        <option>First</option>
+                                        <option>Second</option>
+                                    </select>
+                                </div>
+                                <div  class="label_search">
+                                    <p>Телефон</p>
+                                    <input placeholder="Телефон">
+                                </div>
+                                <div class="nextNews">ІЗДЕУ</div>
                             </div>
-                        </div> 
-                        
-                            <!-- <gallery :images="images" :index="index" @close="index = null"></gallery>
-                            <div
-                                class="image"
-                                v-for="(image, imageIndex) in images"
-                                :key="imageIndex"
-                                @click="index = imageIndex"
-                                :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '200px' }"
-                            ></div> -->
-                           
+                        </div>    
                     </div> 
-
-                    <!-- news -->
-                    <div class="photosMainBlock">
-                        <div class="nameMenu">
-                            <p>{{$t("message.news")}}</p>
-                        </div>
-                        <!-- news scroll -->
-                        <div class="newsScrollBlock">
-                            
-                        </div>   
+                    <div class="BorrowMainBlock" @click="calculation">
+                        <div class="photoScrollBlock">
+                            <div class="inform_row">
+                                <p class="borrowText">Маденов Нурбол</p>
+                                <p class="borrowText"><a href="tel:87074252290">87074252290</a></p>
+                            </div>
+                            <div class="inform_row">
+                                <div>
+                                <p class="cost">13 000 тг</p>
+                                <p class="borrowText">Алған күні: 25.05.2019</p>
+                              
+                                </div>
+                                <div>
+                                <p class="borrowText">Елшат</p>
+                                </div>
+                            </div>
+                        </div>    
                     </div> 
+                    <div class="BorrowMainBlock" style="background:#9241af" @click="calculation">
+                         <div class="photoScrollBlock">
+                             <div class="inform_row">
+                                <p class="borrowText">Маденов Нурбол</p>
+                                <p class="borrowText"><a href="tel:87074252290">87074252290</a></p>
+                            </div>
+                            <div class="inform_row">
+                                <div>
+                                <p class="cost">13 000 тг</p>
+                                <p class="borrowText">Алған күні: 25.05.2019</p>
+                             
+                                </div>
+                                <div>
+                                <p class="borrowText">Елшат</p>
+                                </div>
+                            </div>
+                        </div>         
+                    </div> 
+                  
                     <!-- load news -->
-                    <div class="nextNews">{{$t("message.add_news")}}</div>
+                    <!-- <div class="nextNews">{{$t("message.add_news")}}</div> -->
              </div> 
                      
         </div>                   
@@ -185,6 +98,13 @@
         components: {
             'gallery': VueGallery
         },
+        methods: {
+            calculation(){
+                 this.$router.push({ 
+                    path: '/calculation'
+                });
+            }
+        }
     };
 </script>
 
@@ -205,7 +125,9 @@
     
     .content {
         width: 100%;
-        
+        .newBorrow {
+            padding: 20px;
+        }
         
         .flexContent {
             width: 100%;
@@ -214,18 +136,11 @@
             flex-wrap: wrap;
             margin-bottom: 20px;
 
-            .mFlex {
-                width: 100%;
-                display: flex;
-                justify-content: space-around;
-            }
-
             .nextNews {
-                    width: 200px;
+                    width: 240px;
                     text-align: center;
                     margin: 0 auto;
                     height: 35px;
-                    margin-top: 20px;
                     border-radius: 5px;
                     line-height: 35px;
                     outline: none;
@@ -239,11 +154,56 @@
                     }
             }
 
-            .photosMainBlock {
+            .BorrowMainBlock, .photosMainBlock {
+
                 width: 100%;
-                background: var(--main-white-color);
-                margin-top: 20px;
-                
+                background: #ca356f;
+                border-radius: 2px;
+                padding: 20px;
+                margin-bottom: 20px;
+                .borrowText {
+                    color: white;
+                    font-size: 14px;
+                }
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+                .cost {
+                    color: white;
+                    font-size: 17px;
+                }
+                .inform_row {
+                    padding-top: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                }
+                .labels {
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .label_search {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    margin-bottom: 10px;
+                }
+                .label_search input {
+                    padding: 8px;
+                    border: 1px solid;
+                    width: 220px;
+                    border-radius: 3px;
+                }
+                .label_search select {
+                    padding: 8px;
+                    border: 1px solid;
+                    width: 240px;
+                    border-radius: 3px;
+                }
                 .newsScrollBlock {
                     width: 100%;
                     padding-top: 20px;
@@ -253,11 +213,6 @@
                 }
                 .photoScrollBlock {
                     width: 100%;
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                    padding-left: 20px;
-                    padding-right: 20px;
-
                     .photoImg {
                         width: 100px;
                         height: 100px;
@@ -273,7 +228,6 @@
                 }
                 .nameMenu {
                         width: 100%;
-                        padding: 10px 20px;
                         border-bottom: 2px solid var(--main-border-color);
 
                         p {
