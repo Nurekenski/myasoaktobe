@@ -73,61 +73,22 @@
         </script>
 
         <style scoped lang="scss"> 
-            p,a{
-                    font-family: Tahoma, Geneva, sans-serif;
-            }
-            .myaso_content {
-                width: 100%;
-            }
-            footer {
-                width: 100%;
-                background-color: #009f3e;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-                align-items: center;
-                font-weight: bold;
-                padding: 20px;
-            }
-            .footer {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-                align-items: flex-end;
-            }
-            .footer img {
-                width: 18px;
-                height: 18px;
-            }
-            .footer p, .footer a {
-                color: white;
-            }
-            .busket_header {
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-            }
-            .count {
-                border-radius: 50%;
-                background-color: white;
-                padding: 5px;
-                width: 10px;
-                height: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-left: 5px;
-            }
-            .header {
-                 width: 100%;
+             .header {
                 background-color: #009f3e;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
-                font-weight: bold;
                 padding: 20px;
                
+            }
+            @media only screen and (max-width: 600px) {
+                .header {
+                    width: 100%;
+                }
+                .footer {
+                    width: 100%;
+                }
             }
             .header a {
                 color: white;
@@ -170,5 +131,49 @@
             .row_right img {
                 width: 18px;
                 height: 18px;
+            }
+            p,a{
+                font-family: Tahoma, Geneva, sans-serif;
+            }
+            .myaso_content {
+                width: 100%;
+            }
+            footer {
+                background-color: #009f3e;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                font-weight: bold;
+                padding: 20px;
+            }
+            .footer {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
+            .footer img {
+                width: 18px;
+                height: 18px;
+            }
+            .footer p, .footer a {
+                color: white;
+            }
+            .busket_header {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .count {
+                border-radius: 50%;
+                background-color: white;
+                padding: 5px;
+                width: 10px;
+                height: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 5px;
             }
         </style>

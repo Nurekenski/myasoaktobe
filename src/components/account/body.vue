@@ -90,10 +90,8 @@
             };
         </script>
         <style scoped lang="scss"> 
-            /*  <---------------------->  */
-                     
+            /*  <---------------------->  */  
             .body {
-                width: 100%;
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
@@ -117,8 +115,8 @@
                 margin-bottom: 15px;
             }
             .product {
-                width: 50%;
-                height: 50%;
+                width: 200px;
+                height: 200px;
                 border-radius: 50%;
                 margin: 10px;
                 border: 5px solid #db2f74;
@@ -156,7 +154,7 @@
                 width: 65px;
                 height: 65px;
             }
-             @media only screen and (max-width: 600px) {
+            @media only screen and (max-width: 600px) {
                 .body {
                     width: 100%;
                     display: flex;
