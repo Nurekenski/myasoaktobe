@@ -12,17 +12,25 @@
                         </div> 
                       
                     </div>
+                    <div v-if="this.loader==true" class="loading">
+                            <img src="../../assets/images/loader_order.gif">
+                    </div>
+                    <div v-else>
+                        <center><p class="oformit_zakaz">{{this.information}}</p></center>
+                    </div>
+                    
                     <p class="oformit_zakaz">Оформить заказ</p>
                     <form>
                         <div class="order_form">
-                            <input placeholder="Имя">
-                            <input placeholder="Телефон">
-                            <input placeholder="Адрес">
-                            <input placeholder="Комментарий">
+                            <input placeholder="Имя" v-model="order.name">
+                            <input placeholder="Телефон"  v-model="order.phone">
+                            <input placeholder="Адрес"  v-model="order.adress">
+                            <input placeholder="Комментарий"  v-model="order.comment">
                         </div>
                     </form>
-                    <button>Отправить</button>
-                    
+                    <button @click="SendOrder">
+                                Отправить
+                    </button>
                 </div>
             </div>                 
         </template>
@@ -42,13 +50,21 @@
                             {"id":"7","name":"Айран", "amount":"1-шт/1 дана","cost":"1000тг/кг","image":require("../../assets/images/horse.jpg")},
                             {"id":"8","name":"Қаймақ", "amount":"1-шт/1 дана","cost":"1000тг/кг","image":require("../../assets/images/horse.jpg")}   
                         ],
+                        information: "",
+                        order: {
+                            name: "",
+                            phone: "",
+                            adress: "",
+                            comment: "",
+                            who: ""
+                        },
+                        loader: false,
                         object: [],
                         allorder: JSON.parse(localStorage.getItem("order_myaso"))
                     };
                 },
                 methods: {
                     Back() {
-                        
                         this.$parent.orders = JSON.parse(localStorage.getItem("order_myaso"));
                         this.$router.push({ 
                             path: '/'
@@ -62,6 +78,31 @@
                             }
                         }
                         return null;
+                    },
+                    SendOrder(){
+                        var obj = {
+                            "name": this.order.name,
+                            "phone": this.order.phone,
+                            "adress": this.order.adress,
+                            "comment": this.order.comment,
+                            "who": "488"
+                        }
+                        this.loader = true;
+                        this.$http.post('/insert_data/get_order', obj,
+                            {
+                                headers: {
+                                        'Content-Type': 'application/json'
+                                }
+                            }
+                        )
+                        .then(res => {
+                           this.information = "Ваш заказ принято мы вам позвоним ждите звонка ...";
+                           this.loader = false;
+                        })
+                        .catch(error => {   
+                           console.log(error);
+                        }
+                        );
                     }
                 },
                 beforeMount() {
@@ -70,7 +111,11 @@
             };
         </script>
         <style scoped lang="scss"> 
-            /*  <---------------------->  */          
+            /*  <---------------------->  */  
+            .loading img {
+                height: 40px;
+                width: 40px;
+            }        
             .body {
                 display: flex;
                 justify-content: center;

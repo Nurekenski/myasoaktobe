@@ -13,9 +13,9 @@ Vue.use(VueCookies);
 
 Vue.use(VModal, { dialog: true });
 
-// Vue.prototype.$http = axios.create({
-//   baseURL: 'http://192.168.0.2:8000/v1',
-// });
+Vue.prototype.$http = axios.create({
+  baseURL: 'https://zhubanovapi.herokuapp.com/v2/',
+});
 
 
 const messages = {
