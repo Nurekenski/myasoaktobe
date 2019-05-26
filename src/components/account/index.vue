@@ -89,6 +89,9 @@
                 .footer {
                     width: 100%;
                 }
+                footer {
+                    width: 100%;
+                }
             }
             .header a {
                 color: white;
