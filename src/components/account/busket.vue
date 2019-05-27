@@ -80,6 +80,7 @@
                         return null;
                     },
                     SendOrder(){
+                       
                         var obj = {
                             "name": this.order.name,
                             "phone": this.order.phone,
@@ -94,10 +95,29 @@
                                         'Content-Type': 'application/json'
                                 }
                             }
-                        )
-                        .then(res => {
-                           this.information = "Ваш заказ принято мы вам позвоним ждите звонка ...";
-                           this.loader = false;
+                        ).then(res => {
+                                this.allorder.forEach(element => {
+                                    var product = {
+                                         "product_name": element.name,
+                                         "amount": element.amount,
+                                         "cost": element.cost,
+                                         "who": res.data.id
+                                    }
+                           
+                                    this.$http.post('/insert_data/get_order_product/', product,
+                                        {
+                                            headers: {
+                                                'Content-Type': 'application/json'
+                                            }
+                                        }
+                                    ).then(res => {
+                                     
+                                    }).catch(error => {   
+                                        console.log(error);
+                                    });
+                                });
+                            this.information = "Ваш заказ принято мы вам позвоним ждите звонка ...";
+                            this.loader = false;
                         })
                         .catch(error => {   
                            console.log(error);

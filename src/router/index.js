@@ -15,7 +15,7 @@
     import Index from '../components/account/index.vue';
     import Body from '../components/account/body.vue';
     import Busket from '../components/account/busket.vue';
-
+    import AllOrder from '../components/account/allorders.vue';
 
 
     import UserPage from '../components/account/UserPage.vue';
@@ -57,6 +57,7 @@
                 children: [
                     { path: '/', component: Body  },
                     { path: 'busket', component: Busket },
+                    { path: 'allorders', component: AllOrder },
                 ]
             },
             {
