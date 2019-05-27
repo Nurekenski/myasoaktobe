@@ -32,6 +32,34 @@
                 </div>                   
         </template>
         <!-- scripts -->
+        
+        <script>
+            export default {
+                data() {
+                    return {
+                        counter: 0,
+                    };
+                },
+                methods: {
+                    busket() {
+                        this.$router.push({ 
+                            path: '/busket'
+                        });
+                    },
+                    SearchOrder(id) {
+                        var i = null;
+                        for (i = 0; this.data.length > i; i += 1) {
+                            if (this.data[i].id === id) {
+                                return this.data[i];
+                            }
+                        }
+                        return null;
+                    }
+                
+                },
+                
+            };
+        </script>
         <style scoped lang="scss"> 
              .header {
                 background-color: #009f3e;
