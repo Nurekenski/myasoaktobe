@@ -4,11 +4,15 @@
               
                
                 <div class="order" v-for="item in this.data" :key="item">
+                    <img src="../../assets/images/leaf_catalog.png" alt="" class="catalog_img">
                     <img v-bind:src="item.image" class="product">
                     <p class="title">{{item.name}}</p>
                     <p>{{item.amount}}</p>
-                    <p>{{item.cost}}</p> 
+                    <p>{{item.cost}}</p>
+                     
                     <button @click="Order(item.id)">ХОЧУ</button>
+                    <img src="../../assets/images/like.png" alt="" class="like_img"> 
+                 
                 </div>
             </div>                 
         </template>
@@ -107,12 +111,29 @@
                 align-items: center;
                 margin: 5px;
             }
+            .order .catalog_img {
+                align-self: flex-start;
+                padding: 20px;
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+         
+        
+          .order .like_img {
+              
+                width: 25px;
+                height: 25px;
+                padding: 10px;
+               
+            }
             .order p {
                 margin-bottom: 5px;
                 color:  #009f3e;
             }
             .order button {
                 margin-bottom: 15px;
+               
             }
             .product {
                 width: 200px;

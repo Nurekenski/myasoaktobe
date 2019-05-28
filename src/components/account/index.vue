@@ -13,11 +13,13 @@
                                 <h3>Вы заказываете мы вам позвоним</h3>
                             </div> -->
                             <div class="row_right">
-                                <img src="../../assets/images/instagram-logo.png">
-                                <a style="cursor:pointer; text-decoration: none" href="https://www.instagram.com/myaso_aktobe/?hl=ru">myaso_aktobe</a>
+                           
                                 <div class="busket_header" >
+                                    <img class="insta_img" src="../../assets/images/instagram-logo.png">
+                                    <a style="cursor:pointer; text-decoration: none" href="https://www.instagram.com/myaso_aktobe/?hl=ru">myaso_aktobe</a>
                                     <div class="count"><p style="color: green">{{this.counter}}</p></div>
-                                    <a class="busket" @click="busket">Корзина</a>
+                                    <!-- <a class="busket" >Корзина</a> -->
+                                    <img @click="busket" src="../../assets/images/basket.png">
                                 </div>
                             </div>
                         </div> 
@@ -61,12 +63,13 @@
             };
         </script>
         <style scoped lang="scss"> 
+           
              .header {
                 background-color: #009f3e;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                align-items: center;
+                align-items: flex-end;
                 padding: 20px;
                
             }
@@ -78,6 +81,12 @@
                     width: 100%;
                 }
                 footer {
+                    width: 100%;
+                }
+                body {
+                    width: 100%;
+                }
+                .app {
                     width: 100%;
                 }
             }
@@ -154,7 +163,15 @@
             .busket_header {
                 display: flex;
                 flex-direction: row;
-                align-items: flex-start;
+                align-items: flex-end;
+            }
+             .busket_header  .insta_img {
+                width: 15px;
+                height: 15px
+            }
+            .busket_header  img{
+                width: 26px;
+                height: 24px;
             }
             .count {
                 border-radius: 50%;
