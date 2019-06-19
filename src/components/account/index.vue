@@ -63,14 +63,16 @@
             };
         </script>
         <style scoped lang="scss"> 
-           
+              #app {
+                  width: 100%;
+              }
              .header {
                 background-color: #009f3e;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: flex-end;
-                padding: 20px;
+               
                
             }
             @media only screen and (max-width: 600px) {
