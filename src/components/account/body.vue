@@ -1,17 +1,18 @@
         <!-- template -->
         <template>
             <div class="body">
-                <div class="content_body">
-                    <div class="order" v-for="item in this.data" :key="item">
-                        <img src="../../assets/images/leaf_catalog.png" alt="" class="catalog_img">
-                        <img v-bind:src="item.image" class="product">
-                        <p class="title">{{item.name}}</p>
-                        <p>{{item.amount}}</p>
-                        <p>{{item.cost}}</p>
-                        
-                        <button @click="Order(item.id)">ХОЧУ</button>
-                        <img src="../../assets/images/like.png" alt="" class="like_img"> 
-                    </div>
+              
+               
+                <div class="order" v-for="item in this.data" :key="item">
+                    <img src="../../assets/images/leaf_catalog.png" alt="" class="catalog_img">
+                    <img v-bind:src="item.image" class="product">
+                    <p class="title">{{item.name}}</p>
+                    <p>{{item.amount}}</p>
+                    <p>{{item.cost}}</p>
+                     
+                    <button @click="Order(item.id)">ХОЧУ</button>
+                    <img src="../../assets/images/like.png" alt="" class="like_img"> 
+                 
                 </div>
             </div>                 
         </template>
@@ -94,13 +95,6 @@
         <style scoped lang="scss"> 
             /*  <---------------------->  */  
             .body {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                padding: 20px;
-            }
-            .content_body {
-                margin-top: 60px;
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
