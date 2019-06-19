@@ -1,7 +1,7 @@
         <!-- template -->
         <template >
                 <div class="myaso_content">
-                        <div class="header">
+                        <div class="header" id="myHeader">
                             <div class="row_left">
                                 <div class="logo">
                                     <img src="../../assets/images/leafleaf.png" alt="">
@@ -13,7 +13,6 @@
                                 <h3>Вы заказываете мы вам позвоним</h3>
                             </div> -->
                             <div class="row_right">
-                           
                                 <div class="busket_header" >
                                     <img class="insta_img" src="../../assets/images/instagram-logo.png">
                                     <a style="cursor:pointer; text-decoration: none" href="https://www.instagram.com/myaso_aktobe/?hl=ru">myaso_aktobe</a>
@@ -57,10 +56,25 @@
                         }
                         return null;
                     }
-                
-                },
-                
+                },  
             };
+            // window.onscroll = function() {myFunction()};
+            // // Get the header
+            // var header = document.getElementById("myHeader");
+            // console.log("sdaa" +header);
+            
+            // // Get the offset position of the navbar
+            // var sticky = header.offsetTop;
+
+            // // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            // function myFunction() {
+            //     if (window.pageYOffset > sticky) {
+            //         header.classList.add("sticky");
+            //     } else {
+            //         header.classList.remove("sticky");
+            //     }
+            // }
+
         </script>
         <style scoped lang="scss"> 
            
@@ -71,8 +85,16 @@
                 justify-content: space-between;
                 align-items: flex-end;
                 padding: 20px;
+                position: fixed;
+                width: 100%;
+            
                
             }
+            // .sticky {
+            //     position: fixed;
+            //     top: 0;
+            //     width: 100%
+            // }
             @media only screen and (max-width: 600px) {
                 .header {
                     width: 100%;
@@ -119,6 +141,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
+                margin-right: 40px;
             }
             .row_right p { 
                 color: white;
