@@ -1,4 +1,3 @@
-        <!-- template -->
         <template >
                 <div class="myaso_content">
                         <div class="header">
@@ -13,7 +12,6 @@
                                 <h3>Вы заказываете мы вам позвоним</h3>
                             </div> -->
                             <div class="row_right">
-                           
                                 <div class="busket_header" >
                                     <img class="insta_img" src="../../assets/images/instagram-logo.png">
                                     <a style="cursor:pointer; text-decoration: none" href="https://www.instagram.com/myaso_aktobe/?hl=ru">myaso_aktobe</a>
@@ -33,8 +31,6 @@
                         </footer> 
                 </div>                   
         </template>
-        <!-- scripts -->
-        
         <script>
             export default {
                 data() {
@@ -76,22 +72,7 @@
                
                
             }
-            @media only screen and (max-width: 600px) {
-                .header {
-                    width: 100%;
-                }
-                .footer {
-                    width: 100%;
-                }
-                footer {
-                    width: 100%;
-                }
-                body {
-                    width: 100%;
-                }
-                .app {
-                    width: 100%;
-                }
+            @media only screen and (max-width: 600px) {       
             }
             .header a {
                 color: white;

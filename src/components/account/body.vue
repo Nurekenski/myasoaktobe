@@ -176,7 +176,6 @@
             }
             @media only screen and (max-width: 600px) {
                 .body {
-                    width: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
