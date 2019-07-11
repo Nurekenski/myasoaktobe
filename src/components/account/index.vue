@@ -69,8 +69,7 @@
                 justify-content: space-between;
                 align-items: flex-end;
                 padding: 20px;
-               
-               
+           
             }
             @media only screen and (max-width: 600px) {       
             }

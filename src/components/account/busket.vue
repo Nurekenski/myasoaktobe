@@ -154,7 +154,6 @@
                 justify-content: center;
                 align-items: center;
                 margin: 5px;
-                padding: 20px;
             }
             .back {
                 align-self: flex-start;
@@ -182,7 +181,7 @@
             }
         
             .buskets {
-                width: 100%;
+                width: 90%;
                 display: flex;
                 flex-direction: row;
                 align-items: flex-start;
@@ -233,7 +232,7 @@
                 margin: 10px;
                 border: 5px solid #db2f74;
             }
-            button {
+            .busket button {
                 border-radius: 20px;
                 width: 55%;
                 background-color: #009f3e;
@@ -241,14 +240,13 @@
                 outline: none;
                 color: white;
                 border: none;
+                margin-bottom: 10px;
             }
             button:hover {
                 box-shadow: 0 2px 20px #149c49;
             }
             @media only screen and (max-width: 600px) {
-                .body {
-                    width: 100%;
-                }
+
                 .busket {
                     width: 100%;
                     margin: 0;
@@ -258,7 +256,7 @@
                 }
                 .order_form input {
                     margin-bottom: 10px;
-                    width: 300px;
+                    width: 270px;
                 }
 
                 
