@@ -123,7 +123,7 @@
                            console.log(error);
                         }
                         );
-                                       window.location.replace("api.whatsapp.com/send?phone=77074252290&text=I%27m%20interested%20in%20your%20car%20for%20sale%20маган%20ет&source=&data=");
+                        window.location.href = "api.whatsapp.com/send?phone=77074252290&text=I%27m%20interested%20in%20your%20car%20for%20sale%20маган%20ет&source=&data=";
                     }
                 },
                 beforeMount() {
