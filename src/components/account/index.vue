@@ -13,8 +13,8 @@
                             </div> -->
                             <div class="row_right">
                                 <div class="busket_header" >
-                                    <img class="insta_img" src="../../assets/images/instagram-logo.png">
-                                    <a style="cursor:pointer; text-decoration: none" href="https://www.instagram.com/myaso_aktobe/?hl=ru">myaso_aktobe</a>
+                                    <!-- <img class="insta_img" src="../../assets/images/instagram-logo.png"> -->
+                                    <!-- <a style="cursor:pointer; text-decoration: none" href="https://www.instagram.com/myaso_aktobe/?hl=ru">myaso_aktobe</a> -->
                                     <div class="count"><p style="color: green">{{this.counter}}</p></div>
                                     <!-- <a class="busket" >Корзина</a> -->
                                     <img @click="busket" src="../../assets/images/basket.png">
