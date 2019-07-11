@@ -24,10 +24,11 @@
                         data:[
                             {"id":"1","name":"Сиыр еті - Говядина", "amount":"15-17кг","cost":"1700тг/кг","image":require("../../assets/images/cow.jpg"),"count":1}, 
                             {"id":"2","name":"Жылқы еті - Конина", "amount":"20-22кг","cost":"1800тг/кг","image":require("../../assets/images/horse.jpg"),"count":1},
-                            {"id":"3","name":"Сиыр/Говядина: Тіл/Язык", "amount":"1-1,5кг","cost":"1700тг/кг","image":require("../../assets/images/til.jpg"),"count":1},
+                            {"id":"3","name":"Фарш", "amount":"кг","cost":"2200тг/кг","image":require("../../assets/images/farsh.jpg"),"count":1},
+                            
                             {"id":"4","name":"Сиыр/Говядина: Өкпе бауыр жүрек", "amount":"6-10кг","cost":"700тг/кг","image":require("../../assets/images/bauir.jpg"),"count":1},
                             // {"id":"5","name":"Сиыр/Говядина: Бас", "amount":"1-шт/1 дана","cost":"6000тг","image":require("../../assets/images/bas.jpg"),"count":1},
-                            {"id":"5","name":"Фарш", "amount":"кг","cost":"2200тг/кг","image":require("../../assets/images/farsh.jpg"),"count":1},
+                            {"id":"5","name":"Сиыр/Говядина: Тіл/Язык", "amount":"1-1,5кг","cost":"1700тг/кг","image":require("../../assets/images/til.jpg"),"count":1},
                             {"id":"6","name":"Қымыз", "amount":"1-шт/1 дана","cost":"1000тг/1,5л","image":require("../../assets/images/kymyz.jpg"),"count":1},
                             {"id":"7","name":"Айран", "amount":"1-шт/1 дана","cost":"300тг/л","image":require("../../assets/images/airan.jpg"),"count":1},
                             {"id":"8","name":"Қаймақ", "amount":"1-шт/1 дана","cost":"250тг/л","image":require("../../assets/images/kaimak.jpg"),"count":1}   
