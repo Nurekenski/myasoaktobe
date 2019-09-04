@@ -22,7 +22,7 @@
                 data() {
                     return {
                         data:[
-                            {"id":"1","name":"Сиыр еті - Говядина", "amount":"15-17кг","cost":"1700тг/кг","image":require("../../assets/images/cow.jpg"),"count":1}, 
+                            {"id":"1","name":"Сиыр еті - Говядина", "amount":"15-17кг","cost":"2000тг/кг","image":require("../../assets/images/cow.jpg"),"count":1}, 
                             {"id":"2","name":"Жылқы еті - Конина", "amount":"20-22кг","cost":"1800тг/кг","image":require("../../assets/images/horse.jpg"),"count":1},
                             {"id":"3","name":"Фарш", "amount":"кг","cost":"2200тг/кг","image":require("../../assets/images/farsh.jpg"),"count":1},
                             
